@@ -696,9 +696,11 @@ function ready(){
     "Lot":"LOT",
     "Effective Filing Date":"EFFECTIVE FILING DATE",
     "Filing Type":"FILING TYPE",
+	"Owner Name":"Owner Name",
     "Owner Type":"OWNER TYPE",
     "Filing Status":"FILING STATUS",
     "Report Status":"REPORT STATUS",
+	"QRWI":"QRWI INFO"
 }
 
 	pointsOverlaySQFT = L.d3SvgOverlay(function(sel,proj){
@@ -891,7 +893,7 @@ function ready(){
 		};
     }
 
-		d3.csv("data/RW_Inspections_cycles1_2.csv",function(data){
+		d3.csv("data/RW_Inspections_cycles1_2_061024.csv",function(data){
 		//d3.csv("https://raw.githubusercontent.com/NYCDOB/data_store/master/facadeLL11_v3.csv",function(data){
 				points = data.map(function(d){
 				d.latLng = [+d["LAT"],+d["LONG"]];
@@ -905,6 +907,8 @@ function ready(){
 				d.filingType = d["FILING TYPE"];
 				d.ownerType = d["OWNER TYPE"];
 				d.reportStatus = d["REPORT STATUS"];
+				d.ownerName = d["Owner Name"];
+				d.qrwi = d["QRWI INFO"];
 			return d;
 			});			
 
