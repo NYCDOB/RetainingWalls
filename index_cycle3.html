@@ -690,7 +690,7 @@ var
 	
 function ready(){
     let _lObj={
-    "BIN":"BIN",
+    "BIN / ID":"BIN",
     "Address":"House Number",
     "Block":"BLOCK",
     "Lot":"LOT",
@@ -893,7 +893,7 @@ function ready(){
 		};
     }
 
-		d3.csv("https://raw.githubusercontent.com/NYCDOB/RetainingWalls/gh-pages/data/RW_Inspections_cycle3_071524.csv",function(data){
+		d3.csv("https://raw.githubusercontent.com/NYCDOB/RetainingWalls/gh-pages/data/RW_Inspections_cycle3_071524x.csv",function(data){
 		//d3.csv("https://raw.githubusercontent.com/NYCDOB/data_store/master/facadeLL11_v3.csv",function(data){
 				points = data.map(function(d){
 				d.latLng = [+d["LAT"],+d["LONG"]];
